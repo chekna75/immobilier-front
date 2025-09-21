@@ -41,11 +41,12 @@
       "themeColor": "#000000"
     },
     "icon": "./assets/app/icon.png",
-    "name": "ImmoApp",
-    "slug": "rentbit",
+    "name": "Koti",
+    "slug": "kotiapp",
     "extra": {
       "eas": {}
     },
+    "scheme": "koti",
     "splash": {
       "image": "./assets/app/splash.png",
       "resizeMode": "cover",
@@ -64,7 +65,7 @@
       "android",
       "web"
     ],
-    "description": "Tu es un expert en développement React Native.  \nGénère le code d’un **MVP mobile** en **React Native (Expo) + TypeScript** pour consommer une API backend Quarkus.  \nL’app concerne un projet immobilier avec authentification et gestion d’annonces.\n\n---\n\n## 🔹 Contraintes techniques\n- Utiliser **Expo + TypeScript**.\n- State management : **React Query** pour les appels API + cache.\n- Navigation : **React Navigation (stack + bottom tabs)**.\n- UI : **NativeWind (Tailwind)** ou **React Native Paper**.\n- Auth : stockage tokens **SecureStore** (expo-secure-store).\n- Images : upload avec **presigned URL** (S3).\n- Config API : mettre l’URL de base `http://localhost:8080` (variable d’env .env).\n\n---\n\n## 🔹 Pages MVP\n1. **Auth**\n   - Login (email/password)\n   - Register (email/password, prénom, nom, téléphone)\n   - Logout\n   - Gestion du refresh token\n\n2. **Profil**\n   - Page `/me` → afficher : prénom, nom, avatar\n   - Éditer prénom, nom, avatar (upload image → presigned URL)\n\n3. **Listings**\n   - Liste paginée (titre, prix, ville, miniature)\n   - Filtres : ville, type (RENT/SALE), prix min/max\n   - Détail annonce (titre, description, images, prix, propriétaire)\n   - Création annonce (titre, description, prix, type, upload photos)\n   - Mise à jour / suppression (si owner/admin)\n\n---\n\n## 🔹 Hooks/API\nCréer un dossier `src/api` avec hooks React Query :\n- `useLogin`\n- `useRegister`\n- `useMe`\n- `useUpdateProfile`\n- `useListings`\n- `useListing(id)`\n- `useCreateListing`\n- `useUpdateListing`\n- `useDeleteListing`\n\n---\n\n## 🔹 Navigation\n- **AuthStack** : Login, Register\n- **AppTabs** :\n  - Home (listings)\n  - New Listing (si OWNER/ADMIN)\n  - Profile\n\n---\n\n## 🔹 Sécurité\n- Au login → stocker access/refresh token (SecureStore).\n- Intercepteur axios → si 401, tenter refresh sinon rediriger login.\n- Logout → supprimer tokens.\n\n---\n\n## 🔹 Exemples attendus\n- Un **exemple complet de `useLogin` hook** avec axios + react-query.\n- Un **exemple d’écran Login** avec formulaire (email, password, bouton).\n- Un **exemple d’écran ListingList** avec fetch + flatlist.\n\n---\n\n⚠️ Objectif : obtenir un **MVP fonctionnel** rapidement (login/register + voir listings + créer une annonce + éditer profil).\n",
+    "description": "Koti est l’application qui simplifie la gestion et la recherche de logements.\nQue vous soyez propriétaire, locataire ou chercheur de logement, Koti vous accompagne au quotidien grâce à une interface intuitive et moderne.",
     "orientation": "portrait",
     "iosStatusBar": {},
     "notification": {
@@ -76,7 +77,6 @@
     "androidStatusBar": {},
     "userInterfaceStyle": "automatic",
     "androidNavigationBar": {},
-    "scheme": "untitled-app",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"

@@ -1,8 +1,8 @@
 {
   "private": true,
-  "name": "rentbit",
-  "homepage": "https://rentbit.draftbit.app",
-  "description": "ImmoApp, powered by Draftbit",
+  "name": "kotiapp",
+  "homepage": "https://kotiapp.draftbit.app",
+  "description": "Koti, powered by Draftbit",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
