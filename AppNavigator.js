@@ -12,12 +12,17 @@ import { I18nManager, Platform, StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { systemWeights } from 'react-native-typography';
 import LinkingConfiguration from './LinkingConfiguration';
+import AppSettingsScreen from './screens/AppSettingsScreen';
 import HomeScreen from './screens/HomeScreen';
+import InAppPurchaseScreen from './screens/InAppPurchaseScreen';
+import LocationPermissionsScreen from './screens/LocationPermissionsScreen';
+import NotificationPermissionsScreen from './screens/NotificationPermissionsScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import PropertyDetailsScreen from './screens/PropertyDetailsScreen';
 import SavedScreen from './screens/SavedScreen';
 import SignInScreen from './screens/SignInScreen';
 import SignUpScreen from './screens/SignUpScreen';
+import UpdateProfileScreen from './screens/UpdateProfileScreen';
 import WelcomeScreen from './screens/WelcomeScreen';
 import palettes from './themes/palettes';
 import Breakpoints from './utils/Breakpoints';
@@ -86,10 +91,38 @@ export default function RootAppNavigator() {
         }}
       >
         <Stack.Screen
+          name="AppSettingsScreen"
+          component={AppSettingsScreen}
+          options={{
+            title: 'App Settings',
+          }}
+        />
+        <Stack.Screen
           name="HomeScreen"
           component={HomeScreen}
           options={{
             title: 'Home',
+          }}
+        />
+        <Stack.Screen
+          name="InAppPurchaseScreen"
+          component={InAppPurchaseScreen}
+          options={{
+            title: 'In-App Purchase',
+          }}
+        />
+        <Stack.Screen
+          name="LocationPermissionsScreen"
+          component={LocationPermissionsScreen}
+          options={{
+            title: 'Location Permissions',
+          }}
+        />
+        <Stack.Screen
+          name="NotificationPermissionsScreen"
+          component={NotificationPermissionsScreen}
+          options={{
+            title: 'Notification Permissions',
           }}
         />
         <Stack.Screen
@@ -125,6 +158,13 @@ export default function RootAppNavigator() {
           component={SignUpScreen}
           options={{
             title: 'Sign Up',
+          }}
+        />
+        <Stack.Screen
+          name="UpdateProfileScreen"
+          component={UpdateProfileScreen}
+          options={{
+            title: 'Update Profile',
           }}
         />
         <Stack.Screen

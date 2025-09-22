@@ -94,6 +94,8 @@ const App = () => {
   const [areAssetsCached, setAreAssetsCached] = React.useState(false);
 
   const [fontsLoaded] = useFonts({
+    Inter_400Regular: Fonts.Inter_400Regular,
+    Inter_600SemiBold: Fonts.Inter_600SemiBold,
     Merriweather_400Regular_Italic: Fonts.Merriweather_400Regular_Italic,
     Merriweather_700Bold_Italic: Fonts.Merriweather_700Bold_Italic,
     Poppins_400Regular: Fonts.Poppins_400Regular,
